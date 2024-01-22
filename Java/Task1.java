@@ -1,16 +1,16 @@
 class MediaItem {
-    protected String title;
-    protected int duration;
-    protected String mediaType;
+     String title;
+     int duration;
+     String mediaType;
 
-    // Constructor
+    
     public MediaItem(String title, int duration, String mediaType) {
         this.title = title;
         this.duration = duration;
         this.mediaType = mediaType;
     }
 
-    // Method to display basic information
+    
     public void displayInfo() {
         System.out.println("Title: " + title);
         System.out.println("Duration: " + duration + " minutes");
@@ -19,7 +19,7 @@ class MediaItem {
 }
 
 class Book extends MediaItem {
-    private String author;
+     String author;
 
     // Constructor
     public Book(String title, int duration, String mediaType, String author) {
@@ -27,7 +27,7 @@ class Book extends MediaItem {
         this.author = author;
     }
 
-    // Override displayInfo method for Book
+    
     @Override
     public void displayInfo() {
         super.displayInfo();
@@ -36,15 +36,15 @@ class Book extends MediaItem {
 }
 
 class Movie extends MediaItem {
-    private String director;
+     String director;
 
-    // Constructor
+    
     public Movie(String title, int duration, String mediaType, String director) {
         super(title, duration, mediaType);
         this.director = director;
     }
 
-    // Override displayInfo method for Movie
+    
     @Override
     public void displayInfo() {
         super.displayInfo();
@@ -55,13 +55,13 @@ class Movie extends MediaItem {
 class MusicAlbum extends MediaItem {
     private String artist;
 
-    // Constructor
+    
     public MusicAlbum(String title, int duration, String mediaType, String artist) {
         super(title, duration, mediaType);
         this.artist = artist;
     }
 
-    // Override displayInfo method for MusicAlbum
+    
     @Override
     public void displayInfo() {
         super.displayInfo();
@@ -71,12 +71,12 @@ class MusicAlbum extends MediaItem {
 
 public class Task1 {
     public static void main(String[] args) {
-        // Create instances of each media type
+        
         Book book = new Book("The Catcher in the Rye", 234, "Book", "J.D. Salinger");
         Movie movie = new Movie("Inception", 148, "Movie", "Christopher Nolan");
         MusicAlbum musicAlbum = new MusicAlbum("Abbey Road", 47, "MusicAlbum", "The Beatles");
 
-        // Demonstrate the use of displayInfo method
+        
         System.out.println("Book Information:");
         book.displayInfo();
 
